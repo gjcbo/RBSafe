@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#define  RBSafeLog(fmt, ...)  NSLog(fmt, ##__VA_ARGS__)
-#define  LSSafeProtectionCrashLog(exception,crash) [NSObject rb_printCrashLogWithException:exception crashType:crash]
-
-//fprintf(stderr,"%s:%d\t\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+//#define  RBSafeLog(fmt, ...)  NSLog(fmt, ##__VA_ARGS__)
+#define  RBSafeLog(fmt, ...) fprintf(stderr,"%s:%d\t\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:fmt, ##__VA_ARGS__] UTF8String]);
+#define  RBSafeProtectionCrashLog(exception,crash) [NSObject rb_printCrashLogWithException:exception crashType:crash]
 
 
 //打印log类型
@@ -37,7 +36,12 @@ typedef void(^RBSafeBlock)(NSException *exception, RBSafeCrashType carshType);
 
 
 @interface NSObject (RBSafe)
-/**打开目前支持的所有防止crash的安全保护，回调block*/
+/**
+ 打开目前支持的所有防止crash的安全保护，block回调异常信息
+
+ @param isDebug ✅上线时请传:NO ,开发时请随意 NO:不闪退、不打印奔溃信息; YES:闪退、打印奔溃信息。内部是通过NSAssert来实现的
+ @param block 回调异常信息
+ */
 + (void)rb_openAllSafeWithIsDebug:(BOOL)isDebug block:(RBSafeBlock)block;
 
 
