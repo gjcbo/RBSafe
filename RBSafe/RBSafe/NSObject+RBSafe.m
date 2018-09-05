@@ -9,7 +9,6 @@
 // 
 
 #import "NSObject+RBSafe.h"
-#import <objc/runtime.h>
 
 static RBSafeLogType rb_safeLogType = RBSafeLogTypeAll;
 static RBSafeBlock rb_safeBlock;
@@ -53,6 +52,7 @@ static RBSafeBlock rb_safeBlock;
         dispatch_once(&onceToken, ^{
            
             [NSObject rb_openSafeProtector];
+            [NSArray rb_openSafeProtector];
         });
         
         if (isDebug) { //YES 闪退、并打印奔溃信息
@@ -137,6 +137,7 @@ static RBSafeBlock rb_safeBlock;
     }
     @catch (NSException *exception) {
         //打印奔溃信息
+        
         RBSafeProtectionCrashLog(exception, RBSafeCrashTypeSelector);
     }
     @finally {
@@ -176,11 +177,12 @@ static RBSafeBlock rb_safeBlock;
     RBSafeLogType logtype = rb_safeLogType;
     if (logtype == RBSafeLogTypeNone) { //如果isDebug = NO 不闪退、不打印奔溃信息
         NSLog(@"11111");
-    }else if (logtype == RBSafeLogTypeAll) { //如果是 YES ，闪退、打印崩溃信息。
+    }else if (logtype == RBSafeLogTypeAll) { //如果是 YES ，（是否闪退：看具体的方法实现）打印崩溃信息。
         RBSafeLog(@"%@",fullMsg);
         //NSAssert 的使用 https://www.jianshu.com/p/526dfd5cbb19
         //条件是反着的。
         NSAssert(NO, @"检查到崩溃,请查看上面的详细信息");
+        NSLog(@"222222");
     }
 }
 

@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+//在这里引入runtime头文件，省的在每个分类中都要引入一次。
+#import <objc/runtime.h>
+
 //#define  RBSafeLog(fmt, ...)  NSLog(fmt, ##__VA_ARGS__)
 #define  RBSafeLog(fmt, ...) fprintf(stderr,"%s:%d\t\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:fmt, ##__VA_ARGS__] UTF8String]);
-#define  RBSafeProtectionCrashLog(exception,crash) [NSObject rb_printCrashLogWithException:exception crashType:crash]
+
+#define  RBSafeProtectionCrashLog(exception,crashtype) [NSObject rb_printCrashLogWithException:exception crashType:crashtype]
 
 
 //打印log类型

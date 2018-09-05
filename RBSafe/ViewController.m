@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIScrollViewDelegate>
+
 
 - (void)getName;
 
@@ -19,16 +20,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//#define NSLog(FORMAT, ...)
     
-//    fprintf(stderr,"%s:%d\t\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
-
-   
+    
 }
 
+#pragma mark - 常见奔溃问题
+//1.方法找不到
 - (IBAction)unrecognizeSelector:(id)sender {
-    [self getName];
+    //    [self getName];
+    
+    //数组掺入nil对象
+    {
+        NSString *nilValue = nil;
+        
+        NSString *strings[3];
+        strings[0] = @"张三";
+        strings[1] = nilValue;
+        
+//        [NSArray arrayWithObjects:strings count:2];
+        NSArray *arr1 = @[@"张三",nilValue];
+    }
+    
+    //数组越界
+//    {
+////        NSArray *arr1 = @[@"杭州",@"武汉",@"成都"];
+////        NSLog(@"%@",arr1[3]);
+////        [arr1 objectAtIndex:3];
+//
+//
+//
+//        NSArray *arr1 = @[];
+//        //[arr1 objectAtIndex:4];
+//
+//        NSLog(@"%@",arr1[0]);
+//    }
+    
 }
+
+
+
 
 
 //#pragma mark - 一 数组奔溃
