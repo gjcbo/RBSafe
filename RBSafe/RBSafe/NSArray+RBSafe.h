@@ -56,16 +56,25 @@
  
  2-2非空数组越界 可能导致崩溃的代码
  NSArray *arr1 = @[@"杭州",@"武汉",@"成都"];
- // NSLog(@"%@",arr1[3]);
- [arr1 objectAtIndex:3];
  
  非空数组越界 奔溃原因
+ NSLog(@"%@",arr1[3]); 使用这种方式调用底层实现的是下面的方法。
  '*** -[__NSArrayI objectAtIndexedSubscript:]: index 3 beyond bounds [0 .. 2]
+ 
+
+ 
+ [arr1 objectAtIndex:3]; 使用这种方式底层调用的是下面的代码。
+ reason: '*** -[__NSArrayI objectAtIndex:]: index 3 beyond bounds [0 .. 2]'
+
  
  3、避免奔溃思路： 使用 runtime 对上述类和方法做方法交换
  
  4、TODO list: 关于不同系统版本，奔溃信息不一致的情况，目前没有测试出来。
  */
+
+/***/
+
+//> iOS 10 '*** -[__NSArrayI objectAtIndex:]: index 3 beyond bounds [0 .. 2]'
 
 
 @end

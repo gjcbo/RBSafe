@@ -30,30 +30,27 @@
     //    [self getName];
     
     //数组掺入nil对象
-    {
-        NSString *nilValue = nil;
-        
-        NSString *strings[3];
-        strings[0] = @"张三";
-        strings[1] = nilValue;
-        
-//        [NSArray arrayWithObjects:strings count:2];
-        NSArray *arr1 = @[@"张三",nilValue];
-    }
+//    {
+//        NSString *nilValue = nil;
+//
+//        NSString *strings[3];
+//        strings[0] = @"张三";
+//        strings[1] = nilValue;
+//
+////        [NSArray arrayWithObjects:strings count:2];
+//        NSArray *arr1 = @[@"张三",nilValue];
+//    }
     
     //数组越界
-//    {
-////        NSArray *arr1 = @[@"杭州",@"武汉",@"成都"];
-////        NSLog(@"%@",arr1[3]);
-////        [arr1 objectAtIndex:3];
-//
-//
-//
+    {
 //        NSArray *arr1 = @[];
 //        //[arr1 objectAtIndex:4];
-//
 //        NSLog(@"%@",arr1[0]);
-//    }
+        
+        NSArray *arr1 = @[@"杭州",@"武汉",@"成都"];
+//        NSLog(@"%@",arr1[3]);
+        [arr1 objectAtIndex:3];
+    }
     
 }
 
