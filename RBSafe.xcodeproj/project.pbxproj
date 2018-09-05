@@ -15,6 +15,7 @@
 		49C8E5CA21301EF000A9AA3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C8E5C921301EF000A9AA3C /* main.m */; };
 		49C8E5D32130252400A9AA3C /* NSArray+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C8E5D22130252400A9AA3C /* NSArray+RBSafe.m */; };
 		49C8E5D621302B9A00A9AA3C /* NSObject+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C8E5D521302B9A00A9AA3C /* NSObject+RBSafe.m */; };
+		49FB4AE4214016AD0016AF23 /* NSMutableArray+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FB4AE3214016AD0016AF23 /* NSMutableArray+RBSafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		49C8E5D22130252400A9AA3C /* NSArray+RBSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RBSafe.m"; sourceTree = "<group>"; };
 		49C8E5D421302B9A00A9AA3C /* NSObject+RBSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+RBSafe.h"; sourceTree = "<group>"; };
 		49C8E5D521302B9A00A9AA3C /* NSObject+RBSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RBSafe.m"; sourceTree = "<group>"; };
+		49FB4AE2214016AD0016AF23 /* NSMutableArray+RBSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+RBSafe.h"; sourceTree = "<group>"; };
+		49FB4AE3214016AD0016AF23 /* NSMutableArray+RBSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+RBSafe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				49C8E5D521302B9A00A9AA3C /* NSObject+RBSafe.m */,
 				49C8E5D12130252400A9AA3C /* NSArray+RBSafe.h */,
 				49C8E5D22130252400A9AA3C /* NSArray+RBSafe.m */,
+				49FB4AE2214016AD0016AF23 /* NSMutableArray+RBSafe.h */,
+				49FB4AE3214016AD0016AF23 /* NSMutableArray+RBSafe.m */,
 			);
 			path = RBSafe;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				49C8E5D32130252400A9AA3C /* NSArray+RBSafe.m in Sources */,
 				49C8E5CA21301EF000A9AA3C /* main.m in Sources */,
 				49C8E5D621302B9A00A9AA3C /* NSObject+RBSafe.m in Sources */,
+				49FB4AE4214016AD0016AF23 /* NSMutableArray+RBSafe.m in Sources */,
 				49C8E5BC21301EEF00A9AA3C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
