@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/gjcbo/RBSafe"
-  s.license      = "MIT (example)"
+#  s.license      = { :type => "MIT", :file => "LICENSE"}
   s.author             = { "RaoBo" => "421624358@qq.com" }
   s.platform	 = :ios, "9.0"
   s.source       = { :git => "http://EXAMPLE/RBSafe.git", :tag => "#{s.version}" }
