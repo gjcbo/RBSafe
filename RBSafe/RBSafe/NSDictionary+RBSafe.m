@@ -1,15 +1,15 @@
 //
-//  NSDictionary+Safe.m
-// https://github.com/lsmakethebest/LSSafeProtector
+//  NSDictionary+RBSafe.m
+//  RBSafe
 //
-//  Created by liusong on 2018/4/20.
-//  Copyright © 2018年 liusong. All rights reserved.
+//  Created by RaoBo on 2018/9/6.
+//  Copyright © 2018年 RaoBo. All rights reserved.
+//
 
-#import "NSDictionary+Safe.h"
+#import "NSDictionary+RBSafe.h"
 #import "NSObject+RBSafe.h"
 
-@implementation NSDictionary (Safe)
-
+@implementation NSDictionary (RBSafe)
 + (void)rb_openSafeProtector {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -48,20 +48,20 @@
 }
 -(instancetype)rb_initWithObjects:(id  _Nonnull const [])objects forKeys:(id<NSCopying>  _Nonnull const [])keys count:(NSUInteger)cnt
 {
-
+    
     id instance = nil;
     @try {
         instance = [self rb_initWithObjects:objects forKeys:keys count:cnt];
     }
     @catch (NSException *exception) {
-
+        
         RBSafeProtectionCrashLog(exception, RBSafeCrashTypeNSDictionary);
         
         //处理错误的数据，重新初始化一个字典
         NSUInteger index = 0;
         id   newObjects[cnt];
         id   newkeys[cnt];
-
+        
         for (int i = 0; i < cnt; i++) {
             if (objects[i] && keys[i]) {
                 newObjects[index] = objects[i];
@@ -77,4 +77,3 @@
 }
 
 @end
-

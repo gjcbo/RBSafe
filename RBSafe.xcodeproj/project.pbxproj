@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49A4DC172141157400211E33 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4DC152141157300211E33 /* NSDictionary+Safe.m */; };
+		49A4DC1A21411B0200211E33 /* NSDictionary+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4DC1921411B0200211E33 /* NSDictionary+RBSafe.m */; };
 		49C8E5BC21301EEF00A9AA3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C8E5BB21301EEF00A9AA3C /* AppDelegate.m */; };
 		49C8E5BF21301EEF00A9AA3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C8E5BE21301EEF00A9AA3C /* ViewController.m */; };
 		49C8E5C221301EEF00A9AA3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C8E5C021301EEF00A9AA3C /* Main.storyboard */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49A4DC152141157300211E33 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
-		49A4DC162141157300211E33 /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
+		49A4DC1821411B0200211E33 /* NSDictionary+RBSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RBSafe.h"; sourceTree = "<group>"; };
+		49A4DC1921411B0200211E33 /* NSDictionary+RBSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RBSafe.m"; sourceTree = "<group>"; };
 		49C8E5B721301EEF00A9AA3C /* RBSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RBSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C8E5BA21301EEF00A9AA3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49C8E5BB21301EEF00A9AA3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 				49C8E5D22130252400A9AA3C /* NSArray+RBSafe.m */,
 				49FB4AE2214016AD0016AF23 /* NSMutableArray+RBSafe.h */,
 				49FB4AE3214016AD0016AF23 /* NSMutableArray+RBSafe.m */,
-				49A4DC162141157300211E33 /* NSDictionary+Safe.h */,
-				49A4DC152141157300211E33 /* NSDictionary+Safe.m */,
+				49A4DC1821411B0200211E33 /* NSDictionary+RBSafe.h */,
+				49A4DC1921411B0200211E33 /* NSDictionary+RBSafe.m */,
 			);
 			path = RBSafe;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 				49C8E5D32130252400A9AA3C /* NSArray+RBSafe.m in Sources */,
 				49C8E5CA21301EF000A9AA3C /* main.m in Sources */,
 				49C8E5D621302B9A00A9AA3C /* NSObject+RBSafe.m in Sources */,
-				49A4DC172141157400211E33 /* NSDictionary+Safe.m in Sources */,
+				49A4DC1A21411B0200211E33 /* NSDictionary+RBSafe.m in Sources */,
 				49FB4AE4214016AD0016AF23 /* NSMutableArray+RBSafe.m in Sources */,
 				49C8E5BC21301EEF00A9AA3C /* AppDelegate.m in Sources */,
 			);
