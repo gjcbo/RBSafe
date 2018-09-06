@@ -61,7 +61,7 @@
     {
         NSMutableArray *arrM3 = [NSMutableArray array];
         NSString *nilValue = nil;
-        [arrM3 addObject:nilValue];
+//        [arrM3 addObject:nilValue];
     }
     
     //2.越界
@@ -74,20 +74,39 @@
             [arrM addObject:[NSString stringWithFormat:@"%d月",i+1]];
         }
 //        NSLog(@"%@",arrM[10]);
-        [arrM objectAtIndex:10];
-        [arrM objectAtIndexedSubscript:10];
+//        [arrM objectAtIndex:10];
+//        [arrM objectAtIndexedSubscript:10];
         
-        [arrM removeObjectAtIndex:10];
+//        [arrM removeObjectAtIndex:10];
         [arrM replaceObjectAtIndex:10 withObject:@"12月"];
-        NSString *nilValue = nil;
-        [arrM replaceObjectAtIndex:10 withObject:nilValue];
-
+//        NSString *nilValue = nil;
+//        [arrM replaceObjectAtIndex:10 withObject:nilValue];
     }
-    
 }
 
 #pragma mark - 四 NSDictionary 常见奔溃
+
+- (IBAction)testNSDictionary:(id)sender {
+//    NSLog(@"点击了 %d 行",__LINE__);
+    //key 为 nil
+    
+    NSString *nilKey = nil;
+    NSString *nilValue = nil;
+    
+    
+    {
+        //key 为 nil 会导致奔溃
+//        NSDictionary *dic2 = @{@"name":@"今日简史",nilKey:@58.0,@"author":@"赫拉利"};
+        
+        //value 为 nil 会导致奔溃
+        NSDictionary *dic3 = @{@"name":@"今日简史",@"price":nilKey ,@"author":@"赫拉利"};
+        
+        
+    }
+}
+
 #pragma mark - 五 NSMutableDictionary 常见奔溃
+
 
 
 

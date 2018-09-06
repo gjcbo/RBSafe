@@ -20,7 +20,9 @@
         
         //注意: 是 objc_getClass 不是 object_getClass
 //        Class cls = object_getClass(@"__NSArrayM"); ❌
-        Class cls = objc_getClass("__NSArrayM");
+//        Class cls = objc_getClass("__NSArrayM");
+        Class cls = NSClassFromString(@"__NSArrayM");
+        
         
         //交换可能会导致奔溃的系统方法
         
