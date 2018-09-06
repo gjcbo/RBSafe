@@ -11,8 +11,10 @@ Pod::Spec.new do |s|
   s.name         = "RBSafe"
   s.version      = "0.0.1"
   s.summary      = "Avoid crash"
-  s.description  = <<-DESC Avoid Crash 
+  s.description  = <<-DESC
+			 Avoid Crash 
                    DESC
+
   s.homepage     = "https://github.com/gjcbo/RBSafe"
   s.license      = "MIT (example)"
   s.author             = { "RaoBo" => "421624358@qq.com" }
