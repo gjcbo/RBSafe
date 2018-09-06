@@ -14,7 +14,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/gjcbo/RBSafe.git", :tag => "s.version }
 
-  s.source_files  = "RBSafe"
+    s.source_files  = "RBSafe/*.{h,m}"
+
+#  s.source_files  = "RBSafe"
   s.requires_arc = true
 
 end
