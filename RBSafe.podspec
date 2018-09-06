@@ -16,10 +16,11 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/gjcbo/RBSafe"
-#  s.license      = { :type => "MIT", :file => "LICENSE"}
+  s.license      = { :type => "MIT", :file => "LICENSE"}
   s.author             = { "RaoBo" => "421624358@qq.com" }
   s.platform	 = :ios, "9.0"
-  s.source       = { :git => "http://EXAMPLE/RBSafe.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/gjcbo/RBSafe.git", :tag => "#{s.version}" }
+
   s.source_files  = "Classes", "RBSafe/RBSafe/RBSafe/*.{h,m}"
   s.requires_arc = true
 
