@@ -1,11 +1,10 @@
 //
 //  ViewController.m
-//  RBSafe
+//  RBSafeExample
 //
-//  Created by RaoBo on 2018/8/24.
-//  Copyright © 2018年 RaoBo. All rights reserved.
+//  Created by RaoBo on 2018/9/6.
+//  Copyright © 2018年 RB. All rights reserved.
 //
-
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -23,7 +22,7 @@
 #pragma mark - 一 方法找不到问题
 //1.方法找不到
 - (IBAction)unrecognizeSelector:(id)sender {
-        [self getName];
+    [self getName];
 }
 
 #pragma mark - 二 NSArray 常见奔溃
@@ -56,38 +55,38 @@
 #pragma mark - 三 NSMutableArray相关奔溃
 
 - (IBAction)testNSMutableArray:(id)sender {
-   
+    
     //1.插入 nil 对象
     {
         NSMutableArray *arrM3 = [NSMutableArray array];
         NSString *nilValue = nil;
-//        [arrM3 addObject:nilValue];
+        //        [arrM3 addObject:nilValue];
     }
     
     //2.越界
     {
         NSMutableArray *arrM = [NSMutableArray array];
-//        arrM[10];
-//        [arrM objectAtIndex:10];
+        //        arrM[10];
+        //        [arrM objectAtIndex:10];
         
         for (int i = 0; i<3; i++) {
             [arrM addObject:[NSString stringWithFormat:@"%d月",i+1]];
         }
-//        NSLog(@"%@",arrM[10]);
-//        [arrM objectAtIndex:10];
-//        [arrM objectAtIndexedSubscript:10];
+        //        NSLog(@"%@",arrM[10]);
+        //        [arrM objectAtIndex:10];
+        //        [arrM objectAtIndexedSubscript:10];
         
-//        [arrM removeObjectAtIndex:10];
+        //        [arrM removeObjectAtIndex:10];
         [arrM replaceObjectAtIndex:10 withObject:@"12月"];
-//        NSString *nilValue = nil;
-//        [arrM replaceObjectAtIndex:10 withObject:nilValue];
+        //        NSString *nilValue = nil;
+        //        [arrM replaceObjectAtIndex:10 withObject:nilValue];
     }
 }
 
 #pragma mark - 四 NSDictionary 常见奔溃
 
 - (IBAction)testNSDictionary:(id)sender {
-//    NSLog(@"点击了 %d 行",__LINE__);
+    //    NSLog(@"点击了 %d 行",__LINE__);
     //key 为 nil
     
     NSString *nilKey = nil;
@@ -96,7 +95,7 @@
     
     {
         //key 为 nil 会导致奔溃
-//        NSDictionary *dic2 = @{@"name":@"今日简史",nilKey:@58.0,@"author":@"赫拉利"};
+        //        NSDictionary *dic2 = @{@"name":@"今日简史",nilKey:@58.0,@"author":@"赫拉利"};
         
         //value 为 nil 会导致奔溃
         NSDictionary *dic3 = @{@"name":@"今日简史",@"price":nilKey ,@"author":@"赫拉利"};
@@ -106,9 +105,5 @@
 }
 
 #pragma mark - 五 NSMutableDictionary 常见奔溃
-
-
-
-
-
 @end
+

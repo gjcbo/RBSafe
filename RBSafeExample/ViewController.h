@@ -1,9 +1,9 @@
 //
 //  ViewController.h
-//  RBSafe
+//  RBSafeExample
 //
-//  Created by RaoBo on 2018/8/24.
-//  Copyright © 2018年 RaoBo. All rights reserved.
+//  Created by RaoBo on 2018/9/6.
+//  Copyright © 2018年 RB. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

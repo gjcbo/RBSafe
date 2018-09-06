@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  RBSafe
+//  RBSafeExample
 //
-//  Created by RaoBo on 2018/8/24.
-//  Copyright © 2018年 RaoBo. All rights reserved.
+//  Created by RaoBo on 2018/9/6.
+//  Copyright © 2018年 RB. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -17,14 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-   
-    [NSObject rb_openAllSafeWithIsDebug:YES block:^(NSException *exception, RBSafeCrashType carshType) {
-
-        //上传 exception 到 Bugly
-        
-    }];
     
+    [NSObject rb_openAllSafeWithIsDebug:YES block:^(NSException *exception, RBSafeCrashType carshType) {
+        //上传exception到Buggly
+    }];
     return YES;
+    
 }
 
 
