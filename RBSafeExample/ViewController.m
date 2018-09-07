@@ -92,18 +92,75 @@
     NSString *nilKey = nil;
     NSString *nilValue = nil;
     
-    
     {
         //key 为 nil 会导致奔溃
         //        NSDictionary *dic2 = @{@"name":@"今日简史",nilKey:@58.0,@"author":@"赫拉利"};
         
         //value 为 nil 会导致奔溃
         NSDictionary *dic3 = @{@"name":@"今日简史",@"price":nilKey ,@"author":@"赫拉利"};
-        
-        
     }
 }
 
 #pragma mark - 五 NSMutableDictionary 常见奔溃
+
+- (IBAction)testNSMutableDic:(id)sender {
+    
+    //正常情况
+    {
+//        NSMutableDictionary *dicM = [[NSMutableDictionary alloc] initWithObjects:@[@"张三",@"18",@"男"] forKeys:@[@"name",@"age",@"gender"]];
+//        NSLog(@"%@",dicM);
+    }
+    
+    
+    
+    NSString *nilKey = nil;
+    //key 为 nil 导致的奔溃。
+    {
+        //这种方式首先会导致数的奔溃(插入nil值)、其次才是字典导致的奔溃。
+//        NSMutableDictionary *dicM = [[NSMutableDictionary alloc] initWithObjects:@[@"张三",@"18",@"男"] forKeys:@[@"name",@"age",nilKey]];
+//        NSLog(@"%@",dicM);
+    }
+   
+    
+    //key 为nil 导致奔溃
+    {
+        NSString *nilKey = nil;
+        NSMutableDictionary *dic1 = [NSMutableDictionary dictionary];
+//        dic1[nilKey] = @""; //会导致奔溃 ❌
+        //奔溃信息 -[__NSDictionaryM setObject:forKeyedSubscript:]: key cannot be nil'
+        
+        
+        
+        //以下三种方式导致的奔溃信息是一样的。(底层调用的是同一个方法)
+//        [dic1 setValue:@"九月" forKey:nilKey]; //KVC key为nil会导致奔溃 ❌
+//        [dic1 setObject:@"九月" forKey:nilKey]; //会导致奔溃 ❌
+        // -[__NSDictionaryM setObject:forKey:]: key cannot be nil'
+        
+        
+        NSString *nilValue = nil;
+//        [dic1 setObject:nilValue forKey:@"month"]; //会导致奔溃 ❌
+        // [__NSDictionaryM setObject:forKey:]: object cannot be nil (key: month)'
+        // -[__NSDictionaryM setObject:forKey:]: key cannot be nil'
+    }
+    
+    
+    //value 为 nil 不会导致奔溃
+    {
+        NSString *nilValue = nil;
+        NSMutableDictionary *dic1=[NSMutableDictionary dictionary];
+        dic1[@"d"] = nilValue;
+    }
+    
+    
+    // removeObjectForkey 时 key 为 nil 导致的奔溃。
+    {
+        NSString *nilKey = nil;
+        NSMutableDictionary *dicM = @{@"name":@"RB",@"age":@"18",@"gender":@"man"}.mutableCopy;
+        
+        [dicM removeObjectForKey:nilKey]; // 会导致奔溃 ❌
+        // -[__NSDictionaryM removeObjectForKey:]: key cannot be nil'
+    }
+}
+
 @end
 

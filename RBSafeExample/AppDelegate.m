@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // YES   NO
     [NSObject rb_openAllSafeWithIsDebug:YES block:^(NSException *exception, RBSafeCrashType carshType) {
         //上传exception到Buggly
     }];

@@ -4,7 +4,7 @@
 //
 //  Created by RaoBo on 2018/8/24.
 //  Copyright © 2018年 RaoBo. All rights reserved.
-//  参考了一下开源库
+//  参考了以下开源库
 //https://github.com/chenfanfang/AvoidCrash
 // 
 
@@ -55,6 +55,7 @@ static RBSafeBlock rb_safeBlock;
             [NSArray rb_openSafeProtector];
             [NSMutableArray rb_openSafeProtector];
             [NSDictionary rb_openSafeProtector];
+            [NSMutableDictionary rb_openSafeProtector];
         });
         
         if (isDebug) { //YES 闪退、并打印奔溃信息
