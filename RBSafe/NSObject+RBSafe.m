@@ -56,6 +56,7 @@ static RBSafeBlock rb_safeBlock;
             [NSMutableArray rb_openSafeProtector];
             [NSDictionary rb_openSafeProtector];
             [NSMutableDictionary rb_openSafeProtector];
+            [NSString rb_openSafeProtector];
         });
         
         if (isDebug) { //YES 闪退、并打印奔溃信息

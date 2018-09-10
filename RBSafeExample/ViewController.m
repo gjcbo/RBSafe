@@ -162,5 +162,22 @@
     }
 }
 
+- (IBAction)testNSString:(UIButton *)sender {
+    NSString *startABusiness = @"年龄大了,不写代码了,回家创业去";
+    NSString *nilStr = nil;
+    
+    //越界
+
+    //    [startABusiness substringFromIndex:20]; //❌ __NSCFConstantString substringFromIndex
+//    [startABusiness substringToIndex:20]; // 错误 [__NSCFConstantString substringToIndex:]
+//    [startABusiness substringWithRange:NSMakeRange(0, 100)]; //错误 __NSCFConstantString  substringWithRange
+    
+        //前缀、后缀
+//    [startABusiness stringByReplacingOccurrencesOfString:@"大了" withString:nilStr]; //-[__NSCFConstantString stringByReplacingOccurrencesOfString:withString:options:range:]
+    
+//    [startABusiness hasPrefix:nilStr]; //-[__NSCFConstantString hasPrefix:]
+    [startABusiness hasSuffix:nilStr];   //-[__NSCFConstantString hasSuffix:]
+}
+
 @end
 

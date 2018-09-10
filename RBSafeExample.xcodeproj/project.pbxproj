@@ -20,6 +20,7 @@
 		49B888342141755700D89A6B /* NSArray+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B8882C2141755700D89A6B /* NSArray+RBSafe.m */; };
 		49B888352141755700D89A6B /* NSDictionary+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B8882E2141755700D89A6B /* NSDictionary+RBSafe.m */; };
 		49B888362141755700D89A6B /* NSObject+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B888322141755700D89A6B /* NSObject+RBSafe.m */; };
+		49CC6D592146BA1E00F952DF /* NSString+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CC6D582146BA1E00F952DF /* NSString+RBSafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		49B888302141755700D89A6B /* NSMutableArray+RBSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+RBSafe.h"; sourceTree = "<group>"; };
 		49B888312141755700D89A6B /* NSDictionary+RBSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RBSafe.h"; sourceTree = "<group>"; };
 		49B888322141755700D89A6B /* NSObject+RBSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RBSafe.m"; sourceTree = "<group>"; };
+		49CC6D572146BA1E00F952DF /* NSString+RBSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+RBSafe.h"; sourceTree = "<group>"; };
+		49CC6D582146BA1E00F952DF /* NSString+RBSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+RBSafe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				49B8882E2141755700D89A6B /* NSDictionary+RBSafe.m */,
 				491BA14B21429D510083CA77 /* NSMutableDictionary+RBSafe.h */,
 				491BA14C21429D510083CA77 /* NSMutableDictionary+RBSafe.m */,
+				49CC6D572146BA1E00F952DF /* NSString+RBSafe.h */,
+				49CC6D582146BA1E00F952DF /* NSString+RBSafe.m */,
 			);
 			path = RBSafe;
 			sourceTree = SOURCE_ROOT;
@@ -301,6 +306,7 @@
 				49B888362141755700D89A6B /* NSObject+RBSafe.m in Sources */,
 				49B888332141755700D89A6B /* NSMutableArray+RBSafe.m in Sources */,
 				49B887FA2141747900D89A6B /* AppDelegate.m in Sources */,
+				49CC6D592146BA1E00F952DF /* NSString+RBSafe.m in Sources */,
 				491BA14D21429D510083CA77 /* NSMutableDictionary+RBSafe.m in Sources */,
 				49B888352141755700D89A6B /* NSDictionary+RBSafe.m in Sources */,
 			);
